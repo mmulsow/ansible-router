@@ -1,0 +1,15 @@
+---
+
+- name: Install dnsmasq
+  apt:
+    name: dnsmasq
+    state: present
+
+- name: Create main dnsmasq conf file
+  template:
+    src: '00_main.conf.j2'
+    dest: '/etc/dnsmasq.d/00_main.conf'
+    owner: root
+    group: root
+    mode: 0644
+  notify: [ 'Test and restart dnsmasq' ]
