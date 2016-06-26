@@ -1,5 +1,4 @@
 ---
 
 network_domain: 'home.narabox.com'
-internal_interface: 'enp3s0'
-network_ipv6_subnet: '2001:470:1f0f:47a::'
+internal_interface: 'enp1s0f1'
