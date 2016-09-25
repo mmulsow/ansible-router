@@ -9,12 +9,9 @@ Installation
 ------------
 On your Ubuntu router run:
 ```bash
-sudo apt-get -y install git python-virtualenv
-virtualenv router-env
-. router-env/bin/activate
+sudo apt -y install ansible
 git clone https://github.com/mmulsow/ansible-router.git
 cd ansible-router
-pip install -r requirements.txt
 vi playbook/group_vars/all.yml  # Configure as needed
 ansible-playbook -i playbook/inventory -b -c local playbook/site.yml
 ```
