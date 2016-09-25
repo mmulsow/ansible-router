@@ -1,5 +1,5 @@
 ---
 
 network_domain: 'home.narabox.com'
-internal_interface: 'enp1s0f0'
+external_interface: 'enp1s0f0'
 internal_interface: 'enp1s0f1'

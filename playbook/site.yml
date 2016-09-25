@@ -3,4 +3,5 @@
 - name: Configure router
   hosts: routers
   roles:
+    - interfaces
     - dnsmasq
