@@ -15,3 +15,11 @@
     owner: root
     group: root
     mode: 0644
+
+- name: Enable forwarding in sysctl config
+  template:
+    src: '60-ip-forward.conf.j2'
+    dest: '/etc/sysctl.d/60-ip-forward.conf'
+    owner: root
+    group: root
+    mode: 0644
