@@ -14,4 +14,5 @@ git clone https://github.com/mmulsow/ansible-router.git
 cd ansible-router
 vi playbook/group_vars/all.yml  # Configure as needed
 ansible-playbook -i playbook/inventory -b -c local playbook/site.yml
+reboot
 ```
