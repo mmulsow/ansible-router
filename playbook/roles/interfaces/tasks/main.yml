@@ -1,0 +1,17 @@
+---
+
+- name: Create /etc/iptables.rules
+  template:
+    src: 'iptables.rules.j2'
+    dest: '/etc/iptables.rules'
+    owner: root
+    group: root
+    mode: 0644
+
+- name: Configure internal interface
+  template:
+    src: 'internal.conf.j2'
+    dest: "/etc/network/interfaces.d/{{ internal_interface }}.conf"
+    owner: root
+    group: root
+    mode: 0644
