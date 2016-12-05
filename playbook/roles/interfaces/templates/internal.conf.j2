@@ -1,5 +1,9 @@
 auto {{ internal_interface }}
 iface {{ internal_interface }} inet static
-address 192.168.0.1
-netmask 255.255.255.0
-pre-up iptables-restore < /etc/iptables.rules
+  address 192.168.0.1
+  netmask 24
+  pre-up iptables-restore < /etc/iptables.rules
+iface {{ internal_interface }} inet6 static
+  address {{ internal_ipv6_addr }}
+  netmask 64
+  pre-up ip6tables-restore < /etc/ip6tables.rules

@@ -2,6 +2,7 @@
 
 domain-needed
 bogus-priv
+enable-ra
 
 conf-file=/usr/share/dnsmasq-base/trust-anchors.conf
 dnssec
@@ -13,4 +14,5 @@ local=/{{ network_domain }}/
 
 interface={{ internal_interface }}
 domain={{ network_domain }}
-dhcp-range=192.168.0.50,192.168.0.150,120h
+dhcp-range=192.168.0.50,192.168.0.250,120h
+dhcp-range=tag:{{ internal_interface }},::1,constructor:{{ internal_interface }},ra-names,12h

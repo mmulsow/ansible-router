@@ -1,9 +1,16 @@
 ---
-
 - name: Create /etc/iptables.rules
   template:
     src: 'iptables.rules.j2'
     dest: '/etc/iptables.rules'
+    owner: root
+    group: root
+    mode: 0644
+
+- name: Create /etc/ip6tables.rules
+  template:
+    src: 'ip6tables.rules.j2'
+    dest: '/etc/ip6tables.rules'
     owner: root
     group: root
     mode: 0644

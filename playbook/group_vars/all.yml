@@ -1,5 +1,5 @@
 ---
-
 network_domain: 'home.narabox.com'
 external_interface: 'enp1s0f0'
 internal_interface: 'enp1s0f1'
+internal_ipv6_addr: '::1' # your IP here, todo: figure out automatically
